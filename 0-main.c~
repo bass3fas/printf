@@ -3,7 +3,6 @@ int main(void)
 {
 	char c;
 	char *str;
-	int i;
 	c = 'H';
 	str = "Hey, I am a string";
 	_putint(_printf("this is no of chars of %s\n", str));

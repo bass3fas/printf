@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 					count += _putstring(va_arg(list,
 								   char *));
 					break;
+				case 'd':
+				case 'i':
+					_putint(va_arg(list, int));
+					break;
 				default:
 					_putchar('%');
 					_putchar(format[i]);
