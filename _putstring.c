@@ -2,6 +2,7 @@
 /**
  * _putstring - puts string from putchar
  * @c: pointer to string
+ * Return: strlen
  */
 int _putstring(char *c)
 {
