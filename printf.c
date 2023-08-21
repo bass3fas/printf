@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	int i, f, count;
 	va_list list;
 
-	if (formet == NULL)
+	if (format == NULL)
 		return (-1);
 	va_start(list, format);
 	f = 0;
