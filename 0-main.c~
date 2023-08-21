@@ -1,0 +1,9 @@
+#include "main.h"
+int main(void)
+{
+	_putstring("string is Str");
+	_putchar('\n');
+	_putint(234);
+	_putchar('\n');
+	return (0);
+}
