@@ -1,9 +1,16 @@
 #include "main.h"
 int main(void)
 {
+	char c;
+	char *str;
+
+	c = 'H';
+	str = "Hey, I am a string";
 	_putstring("string is Str");
 	_putchar('\n');
 	_putint(-234);
 	_putchar('\n');
+	_printf("printing string %s longer\n", str);
+	_printf("printing %c hash c should not appear\n", c);
 	return (0);
 }
