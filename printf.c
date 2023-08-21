@@ -6,33 +6,40 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, f;
+	int i, f, count;
 	va_list list;
 
 	va_start(list, format);
 	f = 0;
+	count = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
+		{
+			count++;
 			_putchar(format[i]);
+		}
 		else
 		{
 			f++, i++;
-			switch (format [i])
+			switch (format[i])
 			{
 				case 'c':
 					_putchar(va_arg(list, int));
+					count++;
 					break;
 				case 's':
-					_putstring(va_arg(list, char *));
+					count += _putstring(va_arg(list,
+								   char *));
 					break;
 				default:
 					_putchar('%');
 					_putchar(format[i]);
+					count += 2;
 					break;
 			}
 		}
 	}
 	va_end(list);
-	return (f);
+	return (count);
 }

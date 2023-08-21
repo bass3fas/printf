@@ -3,7 +3,7 @@
  * _putstring - puts string from putchar
  * @c: pointer to string
  */
-void _putstring(char *c)
+int _putstring(char *c)
 {
 	int i = 0;
 
@@ -12,4 +12,5 @@ void _putstring(char *c)
 		_putchar(c[i]);
 		i++;
 	}
+	return (i);
 }

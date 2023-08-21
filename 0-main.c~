@@ -3,14 +3,13 @@ int main(void)
 {
 	char c;
 	char *str;
-
+	int i;
 	c = 'H';
 	str = "Hey, I am a string";
-	_putstring("string is Str");
+	_putint(_printf("this is no of chars of %s\n", str));
 	_putchar('\n');
-	_putint(-234);
-	_putchar('\n');
-	_printf("printing string %s longer\n", str);
+	_printf("printing string: %s, successfully\n", str);
 	_printf("printing %c hash c should not appear\n", c);
+	_printf("handling wrong identifierr %% or %i\n");
 	return (0);
 }
